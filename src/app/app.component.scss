@@ -1,29 +1,74 @@
-
-
-.btn-menu {
-    margin-top: 10px;
-    margin-left: 20px;
-    border-color: white;
+// ===Mixins===
+@mixin font-pangolin {
+    font-family: 'Pangolin', bold, cursive;
 }
 
-.container, .container-fluid {
-    margin-top: 60px;
+@mixin font-neucha{
+    font-family: 'Neucha', cursive;
+}
+// ===/ Mixins===
+
+h5, h6, dt {
+    @include font-pangolin;
+    padding-top:8px;
 }
 
-.operator {
-    width: 50%; height: auto;
+h3, h4, dd {
+    @include font-neucha;
 }
 
-.job-link, .year {
-    color: black;
+//Navigation
+
+.img-logo {
+    height:46px;
+    padding-bottom:4px;
 }
 
-.index-link {
-    font-weight: bold;
+// Info
+.mifag-info {
+    padding-top:80px;
+    padding-bottom:40px;
 }
 
- h6, dd, dt, .nav-link, .index-link{
-    font-style: italic;
+// Jobs
+.mifag-jobs {
+    padding-top:80px;
+    padding-bottom:40px;
+}
+
+.piano-sound {
+    background-color: #FFFFFF;
+}
+
+.merger {
+    background-color: #A0522D;
+}
+
+.clean-light {
+    background-color: #000000;
+}
+
+.moven {
+    background-color: #1E90FF;
+}
+
+.stance-studio {
+    background-color: #800080;
+}
+
+.himlux-comandir {
+    background-color: #FFFFFF;
+}
+// Hobbies
+.mifag-hobbies {
+    padding-top:80px;
+    padding-bottom:40px;
+}
+
+// Footer
+.footer {
+    padding-top:40px;
+    padding-bottom:10px;
 }
 
 .link-icon{
@@ -35,14 +80,4 @@
 .call-icon {
     width:48px;
     height:48px;
-}
-
-.line {
-border-left: 2px solid #343a40;
-}
-
-/* navbar */
-
-.nav-brand {
-
 }
