@@ -6,78 +6,199 @@
 @mixin font-neucha{
     font-family: 'Neucha', cursive;
 }
+
+@mixin font-russo{
+    font-family: 'Russo One', sans-serif;
+}
 // ===/ Mixins===
 
+// ===Variables and selectors===
+$transition: 200ms linear;
+
+%one-border {
+    border-bottom: 4px solid #0c9c35;
+    padding-bottom: 4px;
+}
+// ===/ Variables and selectors===
+
+// ===Fonts===
 h5, h6, dt {
     @include font-pangolin;
     padding-top:8px;
 }
 
-h3, h4, dd {
+h2, h3, h4, dd {
     @include font-neucha;
 }
+// ===/ Fonts===
 
 //Navigation
-
 .img-logo {
-    height:46px;
-    padding-bottom:4px;
+    height: 46px;
+    padding-bottom: 4px;
 }
 
 // Info
 .mifag-info {
-    padding-top:80px;
-    padding-bottom:40px;
+    padding-top: 80px;
+    padding-bottom: 40px;
+    .col-info {
+        @extend %one-border;
+    }
+    .row-info {
+        padding-top: 20px;
+    }
 }
 
 // Jobs
 .mifag-jobs {
-    padding-top:80px;
-    padding-bottom:40px;
+    padding-top: 80px;
+    padding-bottom: 40px;
+    .col-jobs {
+        @extend %one-border;
+    }
+    .row-jobs {
+        padding-top: 20px;
+    }
+    .card-title {
+        font-weight: bold;
+        letter-spacing: 0.1rem;
+    }
+    .card-text {
+        @include font-russo;
+        letter-spacing: 0.1rem;
+    }
+    .btn {
+        @include font-russo;
+        border-width: 2px;
+        letter-spacing: 0.2rem;
+        transition: $transition;
+    }
 }
 
 .piano-sound {
     background-color: #FFFFFF;
+    .card-body{
+        color: #000000;
+    }
+    .btn {
+        border-color: #000000;
+        color: #000000;
+        &:hover {
+            border-color: #bd5d05;
+            color: #bd5d05;
+        }
+    }
 }
 
 .merger {
-    background-color: #A0522D;
+    background: url(../assets/img/jobs/grey-stucco.png);
+    .card-body {
+        color: #000000;
+    }
+    .btn {
+        border-color: #000000;
+        color: #000000;
+        &:hover {
+            border-color: #ba5d09;
+            color: #ba5d09;
+        }
+    }
 }
 
 .clean-light {
     background-color: #000000;
+    .card-body {
+        color: #FFFFFF;
+    }
+    .btn {
+        border-color: #FFFFFF;
+        color: #FFFFFF;
+        &:hover {
+            border-color: #4062cd;
+            color: #4062cd;
+        }
+    }
 }
 
 .moven {
     background-color: #1E90FF;
+    .card-body{
+            color: #FFFFFF;
+    }
+    .btn {
+        border-color: #FFFFFF;
+        color: #FFFFFF;
+        &:hover {
+            border-color: #000000;
+            color: #000000;
+        }
+    }
 }
 
 .stance-studio {
     background-color: #800080;
+    .card-body{
+        color: #FFFFFF;
+    }
+    .btn {
+        border-color: #FFFFFF;
+        color: #FFFFFF;
+        &:hover {
+            border-color: #000000;
+            color: #000000;
+        }
+    }
 }
 
 .himlux-comandir {
     background-color: #FFFFFF;
+    .card-body{
+        color: #000000;
+    }
+    .btn {
+        border-color: #000000;
+        color: #000000;
+        &:hover {
+            border-color: #d11818;
+            color: #d11818;
+        }
+    }
 }
+
 // Hobbies
 .mifag-hobbies {
-    padding-top:80px;
-    padding-bottom:40px;
+    padding-top: 80px;
+    padding-bottom: 40px;
+    .col-hobbies {
+        @extend %one-border;
+    }
+    .row-hobbies {
+        padding-top: 20px;
+    }
 }
+
 
 // Footer
 .footer {
-    padding-top:40px;
-    padding-bottom:10px;
+    padding-top: 40px;
+    padding-bottom: 50px;
+    background-color: #0c9c35;
+    .link-icon{
+        width: 40px;
+        height: 40px;
+        margin-left: 4px;
+        margin-bottom: 4px;
+    }
+    .link-icon-two {
+        width: 40px;
+        height: 40px;
+        margin-left: 4px;
+    }
+    .call-icon {
+        width: 60px;
+        height: 60px;
+        margin-left: 10px;
+    }
 }
 
-.link-icon{
-    width:32px;
-    height:32px;
-    margin-left:2px;
-}
-
-.call-icon {
-    width:48px;
-    height:48px;
-}
