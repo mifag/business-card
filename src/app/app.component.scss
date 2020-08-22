@@ -176,7 +176,25 @@ h2, h3, h4, dd {
     .row-hobbies {
         padding-top: 20px;
     }
+    //Coding
+    .row-coding {
+        padding-top: 20px;
+        padding-bottom: 10px;
+        .img-coding {
+            width: 280px;
+            transition: $transition;
+            &:hover {
+                width:350px;
+            }
+        }
+    }
+    //Music
+    .row-music {
+
+    }
 }
+
+
 
 // Footer
 .footer {
