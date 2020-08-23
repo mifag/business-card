@@ -14,6 +14,7 @@
 
 // ===Variables and selectors===
 $transition: 200ms linear;
+$transform: scale(1.02);
 
 %one-border {
     border-bottom: 4px solid #0c9c35;
@@ -22,20 +23,36 @@ $transition: 200ms linear;
 // ===/ Variables and selectors===
 
 // ===Fonts===
-h5, h6, dt {
+h5, h6, dt, th {
     @include font-pangolin;
-    padding-top:8px;
+    padding-top: 8px;
 }
 
-h2, h3, h4, dd {
+h2, h3, h4, dd, td {
     @include font-neucha;
 }
+
+a {
+    color: #077d29;
+    font-weight: bold;
+    &:hover {
+        color: #013b11;
+    }
+}
 // ===/ Fonts===
+
+body {
+    position:relative;
+}
 
 //Navigation
 .img-logo {
     height: 46px;
     padding-bottom: 4px;
+    transition: $transition;
+    &:hover {
+        transform: scale(1.1);
+    }
 }
 
 // Info
@@ -48,6 +65,12 @@ h2, h3, h4, dd {
     .row-info {
         padding-top: 20px;
     }
+    .carousel {
+        transition: $transition;
+        &:hover {
+            transform: $transform;
+        }
+    }
 }
 
 // Jobs
@@ -59,6 +82,12 @@ h2, h3, h4, dd {
     }
     .row-jobs {
         padding-top: 20px;
+    }
+    .card {
+        transition: $transition;
+        &:hover {
+            transform: $transform;
+        }
     }
     .card-title {
         font-weight: bold;
@@ -176,46 +205,92 @@ h2, h3, h4, dd {
     .row-hobbies {
         padding-top: 20px;
     }
-    //Coding
-    .row-coding {
+
+    //Music
+    .row-music {
         padding-top: 20px;
         padding-bottom: 10px;
-        .img-coding {
-            width: 280px;
+        .img-audio {
+            width: 300px;
+            margin-bottom: 10px;
             transition: $transition;
             &:hover {
-                width:350px;
+                transform: $transform;
+            }
+        }
+        .row-school {
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+        .carousel-music {
+            transition: $transition;
+            &:hover {
+                transform: $transform;
+            }
+        }
+        .img-music {
+            transition: $transition;
+            &:hover {
+                transform: $transform;
+                z-index: 1;
+            }
+            &:active {
+                transform: scale(3);
+                position: absolute;
+                z-index: 100;
             }
         }
     }
-    //Music
-    .row-music {
+}
 
+//Coding
+.mifag-coding {
+    padding-top: 80px;
+    padding-bottom: 10px;
+    .col-coding {
+        @extend %one-border;
+    }
+    .img-coding {
+        width: 280px;
+        transition: $transition;
+        &:hover {
+            transform: $transform;
+        }
     }
 }
 
-
-
 // Footer
 .footer {
-    padding-top: 40px;
-    padding-bottom: 50px;
+    padding-top: 30px;
+    padding-bottom: 40px;
     background-color: #0c9c35;
     .link-icon{
         width: 40px;
         height: 40px;
         margin-left: 4px;
         margin-bottom: 4px;
+        transition: $transition;
+        &:hover {
+            transform: scale(1.1);
+        }
     }
     .link-icon-two {
         width: 40px;
         height: 40px;
         margin-left: 4px;
+        transition: $transition;
+        &:hover {
+            transform: scale(1.1);
+        }
     }
     .call-icon {
         width: 60px;
         height: 60px;
         margin-left: 10px;
+        transition: $transition;
+        &:hover {
+            transform: scale(1.1);
+        }
     }
 }
 
