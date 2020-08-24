@@ -103,6 +103,9 @@ body {
         letter-spacing: 0.2rem;
         transition: $transition;
     }
+    .btn-body:hover {
+        transform: $transform;
+    }
 }
 
 .piano-sound {
@@ -112,6 +115,7 @@ body {
     }
     .btn {
         border-color: #000000;
+        font-weight: bold;
         color: #000000;
         &:hover {
             border-color: #bd5d05;
@@ -195,6 +199,10 @@ body {
     }
 }
 
+.btn-store {
+    border-color: black;
+}
+
 // Hobbies
 .mifag-hobbies {
     padding-top: 80px;
@@ -245,7 +253,7 @@ body {
 
 //Coding
 .mifag-coding {
-    padding-top: 80px;
+    padding-top: 40px;
     padding-bottom: 10px;
     .col-coding {
         @extend %one-border;
