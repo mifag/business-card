@@ -41,11 +41,18 @@ a {
 }
 // ===/ Fonts===
 
-body {
-    position:relative;
+// ===Width===
+html, body {
+    max-width:100%;
+    overflow-x:hidden;
 }
+// ===/ Width===
 
 //Navigation
+.navbar {
+    max-width:100%;
+}
+
 .img-logo {
     height: 46px;
     padding-bottom: 4px;
@@ -200,7 +207,7 @@ body {
 }
 
 .btn-store {
-    border-color: black;
+    border-color: #d8ddd8;
 }
 
 // Hobbies
@@ -236,16 +243,85 @@ body {
                 transform: $transform;
             }
         }
-        .img-music {
-            transition: $transition;
-            &:hover {
-                transform: $transform;
-                z-index: 1;
-            }
-            &:active {
-                transform: scale(3);
-                position: absolute;
-                z-index: 100;
+        .row-img-music {
+            padding-bottom: 10px;
+            .col-6 {
+                padding-left: 5px;
+                padding-right: 5px;
+
+                .hover-image-6 {
+                    position: relative;
+                    overflow: hidden;
+                    display: inline-block;
+                    line-height: 0;
+                    button {
+                        vertical-align: middle;
+                        padding: 0rem;
+                    }
+                    img + img,
+                    img + i {
+                        display: block;
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        margin-top: -32px;
+                        margin-left: -32px;
+                        width: 64px;
+                        height: 64px;
+                        transition: transform 0.7s ease 0s;
+                        transform: scale(0);
+                        font-size: 64px;
+                        color: #fff;
+                        z-index: 1;
+                    }
+                    button:hover img + img,
+                    button:hover img + i {
+                        transform: scale(1);
+                        opacity: 1;
+                    }
+                    button::before {
+                        transition: all 0.5s ease;
+                        content: "";
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        right: 0;
+                        bottom: 0;
+                        background: #bfffd9;
+                        transform: scale(0);
+                        border-top-left-radius: 0.25rem;
+                        border-top-right-radius: 0.25rem;
+                        border-bottom-right-radius: 0.25rem;
+                        border-bottom-left-radius: 0.25rem;
+                    }
+                    button:hover::before {
+                        opacity: 0.5;
+                        transform: scale(1);
+                    }
+                    button::after {
+                        transition: all 0.6s ease 0.2s;
+                        content: "";
+                        position: absolute;
+                        top: 1rem;
+                        left: 1rem;
+                        right: 1rem;
+                        bottom: 1rem;
+                        border: 1px solid #aaa;
+                        background: #33b777;
+                        opacity: 0;
+                        transform: scale(0);
+                    }
+                    button:hover::after {
+                        opacity: 0.35;
+                        transform: scale(1);
+                    }
+                }
+                .img-music {
+                    transition: $transition;
+                    &:hover {
+                        transform: $transform;
+                    }
+                }
             }
         }
     }
