@@ -80,6 +80,25 @@ html, body {
     }
 }
 
+//Coding
+.mifag-coding {
+    padding-top: 40px;
+    padding-bottom: 10px;
+    .row-coding {
+        padding-top: 20px;
+    }
+    .col-coding {
+        @extend %one-border;
+    }
+    .img-coding {
+        width: 280px;
+        transition: $transition;
+        &:hover {
+            transform: $transform;
+        }
+    }
+}
+
 // Jobs
 .mifag-jobs {
     padding-top: 80px;
@@ -323,22 +342,6 @@ html, body {
                     }
                 }
             }
-        }
-    }
-}
-
-//Coding
-.mifag-coding {
-    padding-top: 40px;
-    padding-bottom: 10px;
-    .col-coding {
-        @extend %one-border;
-    }
-    .img-coding {
-        width: 280px;
-        transition: $transition;
-        &:hover {
-            transform: $transform;
         }
     }
 }
