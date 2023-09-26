@@ -134,7 +134,37 @@ html, body {
     }
 }
 
-.piano-sound {
+.navigator {
+    background: #FFFFFF;
+    .card-body {
+        color: #000000;
+    }
+    .btn {
+        border-color: #000000;
+        color: #000000;
+        &:hover {
+            border-color: #4062cd;
+            color: #4062cd;
+        }
+    }
+}
+
+.glinka {
+    background: #FFFFFF;
+    .card-body {
+        color: #000000;
+    }
+    .btn {
+        border-color: #000000;
+        color: #000000;
+        &:hover {
+            border-color: #ba5d09;
+            color: #ba5d09;
+        }
+    }
+}
+
+.mvg {
     background-color: #FFFFFF;
     .card-body{
         color: #000000;
@@ -238,6 +268,18 @@ html, body {
     }
     .row-hobbies {
         padding-top: 20px;
+    }
+
+
+    .row-video {
+        padding-top: 40px;
+
+        .youtube-icon {
+            width: 8%;
+        }
+        .instagram-icon {
+            width: 4%;
+        }
     }
 
     //Music
@@ -373,7 +415,8 @@ html, body {
     .call-icon {
         width: 60px;
         height: 60px;
-        margin-left: 10px;
+        margin: auto;
+        display: block;
         transition: $transition;
         &:hover {
             transform: scale(1.1);
