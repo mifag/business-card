@@ -4,11 +4,11 @@
 }
 
 @mixin font-neucha{
-    font-family: 'Neucha', cursive;
+    font-family: 'Neucha';
 }
 
 @mixin font-russo{
-    font-family: 'Russo One', sans-serif;
+    font-family: 'Russo One';
 }
 // ===/ Mixins===
 
@@ -23,13 +23,17 @@ $transform: scale(1.02);
 // ===/ Variables and selectors===
 
 // ===Fonts===
-h5, h6, dt, th {
+h6, h5, dt, th {
     @include font-pangolin;
     padding-top: 8px;
 }
 
-h2, h3, h4, dd, td {
+h4, dd, td {
     @include font-neucha;
+}
+
+h2, h3 {
+    @include font-russo;
 }
 
 a {
@@ -270,15 +274,15 @@ html, body {
         padding-top: 20px;
     }
 
-
+    //Video
     .row-video {
         padding-top: 40px;
 
         .youtube-icon {
-            width: 8%;
+            width: 10%;
         }
         .instagram-icon {
-            width: 4%;
+            width: 5%;
         }
     }
 
