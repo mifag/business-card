@@ -8,5 +8,5 @@ import { Component} from '@angular/core';
 export class AppComponent {
    title = 'business-card';
 
-   getAge = birthDate => Math.floor((new Date().valueOf() - new Date(birthDate).valueOf()) / 3.15576e+10)
+   getAge = Math.floor((new Date().valueOf() - new Date('1992-11-11').valueOf()) / 3.15576e+10)
 }
