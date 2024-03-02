@@ -8,7 +8,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "typedoc": "typedoc && touch docs/.nojekyll"
+    "deploy": "touch ./output_folder/.nojekyll && gh-pages -d output_folder -t true"
   },
   "private": true,
   "dependencies": {
