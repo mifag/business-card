@@ -8,7 +8,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "deploy": "touch ./output_folder/.nojekyll && gh-pages -d output_folder -t true"
+    "deploy": "rm -rf node_modules/.cache && rimraf out && next build && next export && touch out/.nojekyll && gh-pages -d out -t true"
   },
   "private": true,
   "dependencies": {
